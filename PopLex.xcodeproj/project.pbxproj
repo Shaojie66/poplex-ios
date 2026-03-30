@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		081506C989D219D2F38FEAFC /* PopLexAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EC7907E6BD37D00829D09 /* PopLexAppModel.swift */; };
+		08B65B292A088A29DF258D77 /* PopLexRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0775B6647A5DBDD13D6F69 /* PopLexRootView.swift */; };
+		0C35BFF51EA56E305163D4E6 /* NotebookTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F100D2AF860DE3A697A581B /* NotebookTabView.swift */; };
+		145D744759C56C5A9079E785 /* LookupTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373986DB74DB86338F77277E /* LookupTabView.swift */; };
+		20DC049AF6FB23FF1CB1408E /* MacFloatingLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A05194946B2B163B3653C8 /* MacFloatingLookupView.swift */; };
+		29253A9E5ACBCEFD97EAEF20 /* ResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4549048A6A700D8D4585B /* ResultCardView.swift */; };
+		2D2435B3E15E2CE648C01171 /* NotebookEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545E3DB805D09812957092DA /* NotebookEntry.swift */; };
+		31B7595D0B473D3AC782FBE8 /* ImageGenerationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E4EE1E5CA81F09221B9B7 /* ImageGenerationService.swift */; };
+		369DE88DE7AE21D982069104 /* MiniMaxAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52A8DD7E1C2DEF1E661B44 /* MiniMaxAPIClient.swift */; };
+		395E8434F654FB0AD4CA8225 /* PopLexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F82BE45EC98B414344FBDF /* PopLexApp.swift */; };
+		48FB1CD3615A79A6067D18DF /* PopLexRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0775B6647A5DBDD13D6F69 /* PopLexRootView.swift */; };
+		4A0A3D342991A3C021A610BC /* NotebookEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545E3DB805D09812957092DA /* NotebookEntry.swift */; };
+		55C4791995A3D2EDB7B6903A /* MacFloatingPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946C645C1D705565A0580E80 /* MacFloatingPanelController.swift */; };
+		59A2B91E23B12BEC26319F8E /* NotebookTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F100D2AF860DE3A697A581B /* NotebookTabView.swift */; };
+		6FFC799776C6A6CFB1E3E9B9 /* PopLexAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EC7907E6BD37D00829D09 /* PopLexAppModel.swift */; };
+		751869CAAC5C588FDA328710 /* LookupTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373986DB74DB86338F77277E /* LookupTabView.swift */; };
+		7D0241F94309E606A60D7F41 /* AIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE9690EEC18A03EAE9F9F64 /* AIModels.swift */; };
+		81A3F12396EBC25795350103 /* PronunciationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F47BBCDC7AC58F65C97F11 /* PronunciationService.swift */; };
+		84D70586F7904D7D429A5BA8 /* MacFloatingLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A05194946B2B163B3653C8 /* MacFloatingLookupView.swift */; };
+		8AEA2D75C858CC1FAE04BD47 /* NotebookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8230621A61BF63B3C1E69FAF /* NotebookStore.swift */; };
+		8FB09BE1F8F58B805751DA2C /* LanguageOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD5850451528F7B4EC61DB /* LanguageOption.swift */; };
+		9E39EC6115206F8E70C56687 /* MiniMaxAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52A8DD7E1C2DEF1E661B44 /* MiniMaxAPIClient.swift */; };
+		9EB5FE6BFCA9203CD3C73A6E /* MacFloatingPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946C645C1D705565A0580E80 /* MacFloatingPanelController.swift */; };
+		ABE4FF65B5AB4A57EC0D1632 /* ImageGenerationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E4EE1E5CA81F09221B9B7 /* ImageGenerationService.swift */; };
+		B2DEA8141628736C25C8FBC9 /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711891A30EE20B5650DE3C4 /* PlatformSupport.swift */; };
+		B3E0F98C74D4731A0F96B676 /* MiniMaxCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5968797E6A3B51B89BDF69 /* MiniMaxCredentialStore.swift */; };
+		BC598E6B2F2FF329B634BBDD /* PopLexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F82BE45EC98B414344FBDF /* PopLexApp.swift */; };
+		C9FB84B7F2040617C5BC7D7E /* StudyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A11B06A65B965EED8CD1B0 /* StudyTabView.swift */; };
+		CB147E408EB2E6190B798194 /* LanguageOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD5850451528F7B4EC61DB /* LanguageOption.swift */; };
+		D1BC5E9ABC747A1C4C4F8155 /* MiniMaxCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5968797E6A3B51B89BDF69 /* MiniMaxCredentialStore.swift */; };
+		D48F9F5DFF51777F21CDBA8B /* StudyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A11B06A65B965EED8CD1B0 /* StudyTabView.swift */; };
+		D6B85DAFAD212484AAA7B550 /* DictionaryLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E2BF8A2169D589275EC399 /* DictionaryLookupService.swift */; };
+		DE6CEAECD9D0FFCD94908352 /* PronunciationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F47BBCDC7AC58F65C97F11 /* PronunciationService.swift */; };
+		E5E0F9DDC79AE4587E4F79F5 /* PopLexTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06CE687FD1800D7F9FC8D41 /* PopLexTheme.swift */; };
+		ECDF3CE68B65AE712A10AC1C /* PopLexTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06CE687FD1800D7F9FC8D41 /* PopLexTheme.swift */; };
+		F1DBF7730AA2C7D6B581590F /* ResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4549048A6A700D8D4585B /* ResultCardView.swift */; };
+		F47A425D67E55E3990720A4F /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711891A30EE20B5650DE3C4 /* PlatformSupport.swift */; };
+		F712BE03F62659620F58B67B /* AIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE9690EEC18A03EAE9F9F64 /* AIModels.swift */; };
+		F79746FB2FB1DC36FC4F8ECD /* DictionaryLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E2BF8A2169D589275EC399 /* DictionaryLookupService.swift */; };
+		FBE292B7006925B7317957F2 /* NotebookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8230621A61BF63B3C1E69FAF /* NotebookStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1711891A30EE20B5650DE3C4 /* PlatformSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformSupport.swift; sourceTree = "<group>"; };
+		1E52A8DD7E1C2DEF1E661B44 /* MiniMaxAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMaxAPIClient.swift; sourceTree = "<group>"; };
+		333AA91E837427F0DE0E20AB /* PopLex.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PopLex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		373986DB74DB86338F77277E /* LookupTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupTabView.swift; sourceTree = "<group>"; };
+		545E3DB805D09812957092DA /* NotebookEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookEntry.swift; sourceTree = "<group>"; };
+		5B92CE3F7AEB49A96F22E5C6 /* PopLexMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopLexMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F100D2AF860DE3A697A581B /* NotebookTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookTabView.swift; sourceTree = "<group>"; };
+		73A11B06A65B965EED8CD1B0 /* StudyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabView.swift; sourceTree = "<group>"; };
+		8230621A61BF63B3C1E69FAF /* NotebookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookStore.swift; sourceTree = "<group>"; };
+		84C4549048A6A700D8D4585B /* ResultCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCardView.swift; sourceTree = "<group>"; };
+		946C645C1D705565A0580E80 /* MacFloatingPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacFloatingPanelController.swift; sourceTree = "<group>"; };
+		9B5968797E6A3B51B89BDF69 /* MiniMaxCredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMaxCredentialStore.swift; sourceTree = "<group>"; };
+		A06CE687FD1800D7F9FC8D41 /* PopLexTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopLexTheme.swift; sourceTree = "<group>"; };
+		C0A05194946B2B163B3653C8 /* MacFloatingLookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacFloatingLookupView.swift; sourceTree = "<group>"; };
+		C1E2BF8A2169D589275EC399 /* DictionaryLookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryLookupService.swift; sourceTree = "<group>"; };
+		D3F47BBCDC7AC58F65C97F11 /* PronunciationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationService.swift; sourceTree = "<group>"; };
+		E49EC7907E6BD37D00829D09 /* PopLexAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopLexAppModel.swift; sourceTree = "<group>"; };
+		E8DD5850451528F7B4EC61DB /* LanguageOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageOption.swift; sourceTree = "<group>"; };
+		E8F82BE45EC98B414344FBDF /* PopLexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopLexApp.swift; sourceTree = "<group>"; };
+		F86E4EE1E5CA81F09221B9B7 /* ImageGenerationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationService.swift; sourceTree = "<group>"; };
+		FDE9690EEC18A03EAE9F9F64 /* AIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIModels.swift; sourceTree = "<group>"; };
+		FF0775B6647A5DBDD13D6F69 /* PopLexRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopLexRootView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0CE71B143FC326719AF8708F /* Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				373986DB74DB86338F77277E /* LookupTabView.swift */,
+				C0A05194946B2B163B3653C8 /* MacFloatingLookupView.swift */,
+				84C4549048A6A700D8D4585B /* ResultCardView.swift */,
+			);
+			path = Lookup;
+			sourceTree = "<group>";
+		};
+		237206ABC058F0301BAAD9A3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				946C645C1D705565A0580E80 /* MacFloatingPanelController.swift */,
+				1711891A30EE20B5650DE3C4 /* PlatformSupport.swift */,
+				E49EC7907E6BD37D00829D09 /* PopLexAppModel.swift */,
+				FF0775B6647A5DBDD13D6F69 /* PopLexRootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		50BD7A46D974DCE9EB792C32 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C1E2BF8A2169D589275EC399 /* DictionaryLookupService.swift */,
+				F86E4EE1E5CA81F09221B9B7 /* ImageGenerationService.swift */,
+				1E52A8DD7E1C2DEF1E661B44 /* MiniMaxAPIClient.swift */,
+				9B5968797E6A3B51B89BDF69 /* MiniMaxCredentialStore.swift */,
+				8230621A61BF63B3C1E69FAF /* NotebookStore.swift */,
+				D3F47BBCDC7AC58F65C97F11 /* PronunciationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		75A8729698746E134E36C43E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0CE71B143FC326719AF8708F /* Lookup */,
+				9D975B456C600C5E1C83515B /* Notebook */,
+				88DD395549FB602F7F507D43 /* Study */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		88DD395549FB602F7F507D43 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				73A11B06A65B965EED8CD1B0 /* StudyTabView.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		95BB43DF54D3478BE9755CC3 /* PopLex */ = {
+			isa = PBXGroup;
+			children = (
+				E8F82BE45EC98B414344FBDF /* PopLexApp.swift */,
+				237206ABC058F0301BAAD9A3 /* App */,
+				75A8729698746E134E36C43E /* Features */,
+				D85319F5D3F768B96F93C832 /* Models */,
+				50BD7A46D974DCE9EB792C32 /* Services */,
+				99D1F8983D603DB0455A9340 /* Theme */,
+			);
+			path = PopLex;
+			sourceTree = "<group>";
+		};
+		99D1F8983D603DB0455A9340 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A06CE687FD1800D7F9FC8D41 /* PopLexTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		9D975B456C600C5E1C83515B /* Notebook */ = {
+			isa = PBXGroup;
+			children = (
+				6F100D2AF860DE3A697A581B /* NotebookTabView.swift */,
+			);
+			path = Notebook;
+			sourceTree = "<group>";
+		};
+		C64D08BCDF824440C6470CD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				333AA91E837427F0DE0E20AB /* PopLex.app */,
+				5B92CE3F7AEB49A96F22E5C6 /* PopLexMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D85319F5D3F768B96F93C832 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDE9690EEC18A03EAE9F9F64 /* AIModels.swift */,
+				E8DD5850451528F7B4EC61DB /* LanguageOption.swift */,
+				545E3DB805D09812957092DA /* NotebookEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECBFE202B52A8F6053F82BED = {
+			isa = PBXGroup;
+			children = (
+				95BB43DF54D3478BE9755CC3 /* PopLex */,
+				C64D08BCDF824440C6470CD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		015509D1279693F00EE5B7E6 /* PopLex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05C0AACA3750A5A5B1B3D82E /* Build configuration list for PBXNativeTarget "PopLex" */;
+			buildPhases = (
+				3C71A8D896F50B9F480A3B04 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopLex;
+			packageProductDependencies = (
+			);
+			productName = PopLex;
+			productReference = 333AA91E837427F0DE0E20AB /* PopLex.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2631FEF40719BD6ADA4F5F59 /* PopLexMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72624F14841EB5CD568EDF25 /* Build configuration list for PBXNativeTarget "PopLexMac" */;
+			buildPhases = (
+				19D18722EA652D02F168B53A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopLexMac;
+			packageProductDependencies = (
+			);
+			productName = PopLexMac;
+			productReference = 5B92CE3F7AEB49A96F22E5C6 /* PopLexMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44DF4EA5DC7A46F6F35D7F67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 4B8F45C3A4C6F1AEC4C8EAB6 /* Build configuration list for PBXProject "PopLex" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = ECBFE202B52A8F6053F82BED;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C64D08BCDF824440C6470CD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				015509D1279693F00EE5B7E6 /* PopLex */,
+				2631FEF40719BD6ADA4F5F59 /* PopLexMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19D18722EA652D02F168B53A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D0241F94309E606A60D7F41 /* AIModels.swift in Sources */,
+				D6B85DAFAD212484AAA7B550 /* DictionaryLookupService.swift in Sources */,
+				ABE4FF65B5AB4A57EC0D1632 /* ImageGenerationService.swift in Sources */,
+				CB147E408EB2E6190B798194 /* LanguageOption.swift in Sources */,
+				751869CAAC5C588FDA328710 /* LookupTabView.swift in Sources */,
+				84D70586F7904D7D429A5BA8 /* MacFloatingLookupView.swift in Sources */,
+				9EB5FE6BFCA9203CD3C73A6E /* MacFloatingPanelController.swift in Sources */,
+				9E39EC6115206F8E70C56687 /* MiniMaxAPIClient.swift in Sources */,
+				D1BC5E9ABC747A1C4C4F8155 /* MiniMaxCredentialStore.swift in Sources */,
+				2D2435B3E15E2CE648C01171 /* NotebookEntry.swift in Sources */,
+				8AEA2D75C858CC1FAE04BD47 /* NotebookStore.swift in Sources */,
+				59A2B91E23B12BEC26319F8E /* NotebookTabView.swift in Sources */,
+				F47A425D67E55E3990720A4F /* PlatformSupport.swift in Sources */,
+				395E8434F654FB0AD4CA8225 /* PopLexApp.swift in Sources */,
+				081506C989D219D2F38FEAFC /* PopLexAppModel.swift in Sources */,
+				48FB1CD3615A79A6067D18DF /* PopLexRootView.swift in Sources */,
+				E5E0F9DDC79AE4587E4F79F5 /* PopLexTheme.swift in Sources */,
+				DE6CEAECD9D0FFCD94908352 /* PronunciationService.swift in Sources */,
+				29253A9E5ACBCEFD97EAEF20 /* ResultCardView.swift in Sources */,
+				D48F9F5DFF51777F21CDBA8B /* StudyTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C71A8D896F50B9F480A3B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F712BE03F62659620F58B67B /* AIModels.swift in Sources */,
+				F79746FB2FB1DC36FC4F8ECD /* DictionaryLookupService.swift in Sources */,
+				31B7595D0B473D3AC782FBE8 /* ImageGenerationService.swift in Sources */,
+				8FB09BE1F8F58B805751DA2C /* LanguageOption.swift in Sources */,
+				145D744759C56C5A9079E785 /* LookupTabView.swift in Sources */,
+				20DC049AF6FB23FF1CB1408E /* MacFloatingLookupView.swift in Sources */,
+				55C4791995A3D2EDB7B6903A /* MacFloatingPanelController.swift in Sources */,
+				369DE88DE7AE21D982069104 /* MiniMaxAPIClient.swift in Sources */,
+				B3E0F98C74D4731A0F96B676 /* MiniMaxCredentialStore.swift in Sources */,
+				4A0A3D342991A3C021A610BC /* NotebookEntry.swift in Sources */,
+				FBE292B7006925B7317957F2 /* NotebookStore.swift in Sources */,
+				0C35BFF51EA56E305163D4E6 /* NotebookTabView.swift in Sources */,
+				B2DEA8141628736C25C8FBC9 /* PlatformSupport.swift in Sources */,
+				BC598E6B2F2FF329B634BBDD /* PopLexApp.swift in Sources */,
+				6FFC799776C6A6CFB1E3E9B9 /* PopLexAppModel.swift in Sources */,
+				08B65B292A088A29DF258D77 /* PopLexRootView.swift in Sources */,
+				ECDF3CE68B65AE712A10AC1C /* PopLexTheme.swift in Sources */,
+				81A3F12396EBC25795350103 /* PronunciationService.swift in Sources */,
+				F1DBF7730AA2C7D6B581590F /* ResultCardView.swift in Sources */,
+				C9FB84B7F2040617C5BC7D7E /* StudyTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		02A86F9278480FE01F982548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PopLex;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		2C6ED60FBCC2D5A2096E8053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.poplex.mac;
+				PRODUCT_NAME = PopLex;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4020C4C1E91F00FF87D09A15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.poplex;
+				PRODUCT_NAME = PopLex;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		49F1B4E42E5BEC174D3767E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.poplex;
+				PRODUCT_NAME = PopLex;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B0CD77DE67CBCAFBACC504E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PopLex;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		D433D58FA828A9DF8FB924B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.poplex.mac;
+				PRODUCT_NAME = PopLex;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05C0AACA3750A5A5B1B3D82E /* Build configuration list for PBXNativeTarget "PopLex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F1B4E42E5BEC174D3767E4 /* Debug */,
+				4020C4C1E91F00FF87D09A15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4B8F45C3A4C6F1AEC4C8EAB6 /* Build configuration list for PBXProject "PopLex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02A86F9278480FE01F982548 /* Debug */,
+				B0CD77DE67CBCAFBACC504E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		72624F14841EB5CD568EDF25 /* Build configuration list for PBXNativeTarget "PopLexMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D433D58FA828A9DF8FB924B0 /* Debug */,
+				2C6ED60FBCC2D5A2096E8053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44DF4EA5DC7A46F6F35D7F67 /* Project object */;
+}
