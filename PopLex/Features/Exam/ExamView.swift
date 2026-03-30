@@ -13,6 +13,7 @@ struct ExamView: View {
     @State private var errorMessage: String?
     @State private var questions: [ExamQuestion] = []
     @State private var showingResults: Bool = false
+    @State private var generationTask: Task<Void, Never>?
 
     var body: some View {
         ZStack {
@@ -28,6 +29,8 @@ struct ExamView: View {
                     onRetake: retakeExam,
                     onDismiss: { dismiss() }
                 )
+            } else if let error = errorMessage {
+                errorView(message: error)
             } else if currentIndex < questions.count {
                 questionView
             }
@@ -36,6 +39,46 @@ struct ExamView: View {
         .popLexNavigationChromeHidden()
         .onAppear {
             generateExam()
+        }
+        .onDisappear {
+            generationTask?.cancel()
+        }
+    }
+
+    private func errorView(message: String) -> some View {
+        VStack(spacing: 24) {
+            Spacer()
+
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.system(size: 56, weight: .black))
+                .foregroundStyle(PopLexTheme.primaryPink.opacity(0.7))
+
+            Text(message)
+                .font(.custom("AvenirNext-DemiBold", size: 18))
+                .foregroundStyle(PopLexTheme.ink)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+
+            Button {
+                retakeExam()
+            } label: {
+                Text("重试")
+                    .font(.custom("AvenirNext-Bold", size: 16))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 32)
+                    .padding(.vertical, 14)
+                    .background(
+                        LinearGradient(
+                            colors: [PopLexTheme.primaryPink, PopLexTheme.primaryBlue],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        ),
+                        in: Capsule()
+                    )
+            }
+            .buttonStyle(.plain)
+
+            Spacer()
         }
     }
 
@@ -104,7 +147,7 @@ struct ExamView: View {
                 }
 
                 VStack(spacing: 12) {
-                    ForEach(question.options, id: \.self) { option in
+                    ForEach(Array(question.options.enumerated()), id: \.offset) { _, option in
                         optionButton(option: option, question: question)
                     }
                 }
@@ -274,7 +317,8 @@ struct ExamView: View {
         isGenerating = true
         errorMessage = nil
 
-        Task {
+        generationTask?.cancel()
+        generationTask = Task {
             let examService = ExamService(credentials: MiniMaxCredentialStore())
             let generatedQuestions = try? await examService.generateExam(
                 from: model.notebook,
@@ -282,6 +326,8 @@ struct ExamView: View {
                 nativeLanguage: model.selectedNativeLanguage,
                 targetLanguage: model.selectedTargetLanguage
             )
+
+            guard !Task.isCancelled else { return }
 
             await MainActor.run {
                 if let generatedQuestions, !generatedQuestions.isEmpty {
@@ -295,12 +341,14 @@ struct ExamView: View {
     }
 
     private func retakeExam() {
+        generationTask?.cancel()
         answers = []
         score = 0
         currentIndex = 0
         selectedOption = nil
         hasAnswered = false
         showingResults = false
+        questions = []
         generateExam()
     }
 }

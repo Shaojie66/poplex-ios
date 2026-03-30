@@ -32,9 +32,10 @@ actor WrongAnswerStore {
         try data.write(to: snapshotURL, options: .atomic)
     }
 
-    func addWrongAnswer(_ wrongAnswer: WrongAnswer, to existing: inout MistakesSnapshot) throws {
-        existing.wrongAnswers.insert(wrongAnswer, at: 0)
-        try save(existing)
+    func addWrongAnswer(_ wrongAnswer: WrongAnswer) async throws {
+        var snapshot = try load()
+        snapshot.wrongAnswers.insert(wrongAnswer, at: 0)
+        try save(snapshot)
     }
 
     func markWordMastered(_ word: String, to existing: inout MistakesSnapshot) throws {

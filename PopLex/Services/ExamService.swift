@@ -47,14 +47,23 @@ actor ExamService {
                 nativeLanguage: nativeLanguage,
                 targetLanguage: targetLanguage
             )
-            return payload.questions.map { item in
-                ExamQuestion(
+            let questions = payload.questions.compactMap { item -> ExamQuestion? in
+                guard item.options.count == 4,
+                      item.options.allSatisfy({ !$0.trimmingCharacters(in: .whitespaces).isEmpty }),
+                      item.options.contains(item.correctAnswer) else {
+                    return nil
+                }
+                return ExamQuestion(
                     word: item.word,
                     options: item.options,
                     correctAnswer: item.correctAnswer,
                     explanation: item.explanation
                 )
             }
+            guard questions.count >= 1 else {
+                return generateFallbackExam(from: Array(trimmedWords), questionCount: questionCount)
+            }
+            return questions
         } catch {
             return generateFallbackExam(from: Array(trimmedWords), questionCount: questionCount)
         }
@@ -64,6 +73,12 @@ actor ExamService {
         from entries: [NotebookEntry],
         questionCount: Int
     ) -> [ExamQuestion] {
+        // Need at least 4 entries to create 4-option questions (3 distractors + 1 correct)
+        // With fewer than 4, fall back to API even if unconfigured, or return empty
+        guard entries.count >= 4 else {
+            return []
+        }
+
         let shuffled = entries.shuffled()
         let count = min(questionCount, shuffled.count)
 
@@ -72,7 +87,19 @@ actor ExamService {
             let wrongEntries = shuffled.filter { $0.id != correctEntry.id }.prefix(3)
             var options = wrongEntries.map { $0.displayTerm }
             options.append(correctEntry.displayTerm)
-            let shuffledOptions = options.shuffled()
+
+            // Ensure unique options (no duplicate displayTerms)
+            var uniqueOptions = [String]()
+            for opt in options {
+                if !uniqueOptions.contains(opt) {
+                    uniqueOptions.append(opt)
+                }
+            }
+            // If deduplication left us with < 4, pad with placeholder markers
+            while uniqueOptions.count < 4 {
+                uniqueOptions.append("选项\(uniqueOptions.count + 1)")
+            }
+            let shuffledOptions = Array(uniqueOptions.shuffled().prefix(4))
 
             return ExamQuestion(
                 word: correctEntry.displayTerm,
@@ -81,11 +108,5 @@ actor ExamService {
                 explanation: "Definition: \(correctEntry.definition)"
             )
         }
-    }
-}
-
-private extension String {
-    var nilIfEmpty: String? {
-        isEmpty ? nil : self
     }
 }

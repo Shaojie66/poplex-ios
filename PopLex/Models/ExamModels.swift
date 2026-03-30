@@ -68,7 +68,9 @@ struct ExamSession: Identifiable, Codable, Hashable, Sendable {
     }
 
     var progress: String {
-        "\(currentIndex + 1)/\(questions.count)"
+        guard !questions.isEmpty else { return "0/0" }
+        let displayIndex = min(currentIndex + 1, questions.count)
+        return "\(displayIndex)/\(questions.count)"
     }
 
     var currentQuestion: ExamQuestion? {

@@ -179,9 +179,7 @@ final class PopLexAppModel {
         wrongAnswers.insert(wrongAnswer, at: 0)
         Task {
             do {
-                var snapshot = try await wrongAnswerStore.load()
-                snapshot.wrongAnswers.insert(wrongAnswer, at: 0)
-                try await wrongAnswerStore.save(snapshot)
+                try await wrongAnswerStore.addWrongAnswer(wrongAnswer)
             } catch {
                 // Silent failure acceptable for Phase 1
             }

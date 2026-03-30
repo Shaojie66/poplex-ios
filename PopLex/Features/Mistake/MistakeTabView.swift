@@ -44,7 +44,9 @@ struct MistakeTabView: View {
             }
 
             Button {
-                model.startExam()
+                if model.notebook.count >= 3 {
+                    model.startExam()
+                }
             } label: {
                 Text("去做真题")
                     .font(.custom("AvenirNext-DemiBold", size: 15))
@@ -61,6 +63,8 @@ struct MistakeTabView: View {
                     )
             }
             .buttonStyle(.plain)
+            .opacity(model.notebook.count < 3 ? 0.5 : 1.0)
+            .disabled(model.notebook.count < 3)
 
             if model.notebook.count < 3 {
                 Text("需要在笔记本中至少添加3个单词")
