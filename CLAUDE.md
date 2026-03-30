@@ -53,3 +53,21 @@ When not configured, the app enters "preview mode" with placeholder content. The
 ## Custom Fonts
 
 App uses Avenir Next family: AvenirNext-Regular, AvenirNext-Medium, AvenirNext-DemiBold, AvenirNext-Bold.
+
+## Design Context
+
+### Users
+Primary: IELTS learners scoring 5.5–6.5 with basic vocabulary wanting to expand academic language. Mobile-first, short sessions, frictionless "lookup → learn → test" flow. Motivated but anxious about exams — the app should feel encouraging and achievable, not overwhelming.
+
+### Brand Personality
+Warm, bright, playful. Smart but relaxed, casual and friendly — not corporate or academic. Voice: like a helpful study companion, not a textbook. Every interaction should feel rewarding and effortless.
+
+### Aesthetic Direction
+Soft pastel gradients (warm peach → light blue → soft pink), white glassmorphic cards floating over the gradient. Reference: Duolingo meets iOS native — playful color but clean, not cluttered. Light mode only in Phase 1. Motion: spring animations, subtle bounces.
+
+### Design Principles
+1. Frictionless learning: Every feature reachable in ≤2 taps from the lookup screen
+2. Warmth over density: Generous whitespace, soft shadows, rounded corners
+3. Playful but not childish: Pink/blue/orange trio signals energy without being garish
+4. Content-first hierarchy: Typography and color draw the eye to word → definition → example
+5. Joyful feedback: Every tap produces satisfying response (spring animation, bounce, color shift)

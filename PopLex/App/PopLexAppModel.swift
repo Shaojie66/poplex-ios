@@ -177,10 +177,12 @@ final class PopLexAppModel {
         let wrongAnswer = WrongAnswer(questionID: questionID, word: word, userAnswer: userAnswer, correctAnswer: correctAnswer)
         wrongAnswers.insert(wrongAnswer, at: 0)
         Task {
-            var snapshot = try? await wrongAnswerStore.load() ?? MistakesSnapshot(wrongAnswers: [], masteredWords: [])
-            snapshot?.wrongAnswers.insert(wrongAnswer, at: 0)
-            if let snapshot {
-                try? await wrongAnswerStore.save(snapshot)
+            do {
+                var snapshot = try await wrongAnswerStore.load()
+                snapshot.wrongAnswers.insert(wrongAnswer, at: 0)
+                try await wrongAnswerStore.save(snapshot)
+            } catch {
+                // Silent failure acceptable for Phase 1
             }
         }
     }
@@ -192,12 +194,14 @@ final class PopLexAppModel {
         let mastered = MasteredWord(word: word)
         masteredWords.insert(mastered, at: 0)
         Task {
-            var snapshot = try? await wrongAnswerStore.load() ?? MistakesSnapshot(wrongAnswers: [], masteredWords: [])
-            if !(snapshot?.masteredWords.contains(where: { $0.word.lowercased() == word.lowercased() }) ?? false) {
-                snapshot?.masteredWords.insert(mastered, at: 0)
-                if let snapshot {
-                    try? await wrongAnswerStore.save(snapshot)
+            do {
+                var snapshot = try await wrongAnswerStore.load()
+                if !snapshot.masteredWords.contains(where: { $0.word.lowercased() == word.lowercased() }) {
+                    snapshot.masteredWords.insert(mastered, at: 0)
+                    try await wrongAnswerStore.save(snapshot)
                 }
+            } catch {
+                // Silent failure acceptable for Phase 1
             }
         }
     }
