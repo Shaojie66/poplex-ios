@@ -43,20 +43,30 @@ struct MistakeTabView: View {
                     .multilineTextAlignment(.center)
             }
 
-            Text("去做真题")
-                .font(.custom("AvenirNext-DemiBold", size: 15))
-                .foregroundStyle(PopLexTheme.primaryPink.opacity(0.5))
-                .padding(.horizontal, 24)
-                .padding(.vertical, 14)
-                .background(PopLexTheme.primaryPink.opacity(0.12), in: Capsule())
-                .overlay {
-                    Capsule()
-                        .stroke(PopLexTheme.primaryPink.opacity(0.3), lineWidth: 1)
-                }
+            Button {
+                model.startExam()
+            } label: {
+                Text("去做真题")
+                    .font(.custom("AvenirNext-DemiBold", size: 15))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 14)
+                    .background(
+                        LinearGradient(
+                            colors: [PopLexTheme.primaryPink, PopLexTheme.primaryBlue],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        ),
+                        in: Capsule()
+                    )
+            }
+            .buttonStyle(.plain)
 
-            Text("真题功能即将推出")
-                .font(.custom("AvenirNext-Regular", size: 13))
-                .foregroundStyle(PopLexTheme.ink.opacity(0.52))
+            if model.notebook.count < 3 {
+                Text("需要在笔记本中至少添加3个单词")
+                    .font(.custom("AvenirNext-Regular", size: 13))
+                    .foregroundStyle(PopLexTheme.ink.opacity(0.52))
+            }
 
             Spacer()
         }
