@@ -54,6 +54,7 @@ struct NotebookTabView: View {
                             artwork: model.artwork(for: entry),
                             isSaved: true,
                             saveAction: {},
+                            onExamTap: model.startExam,
                             pronunciationService: model.pronunciationService
                         )
                         .padding(18)

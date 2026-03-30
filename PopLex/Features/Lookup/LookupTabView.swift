@@ -29,6 +29,7 @@ struct LookupTabView: View {
                             artwork: model.currentArtwork,
                             isSaved: model.currentResultIsSaved,
                             saveAction: model.saveCurrentResult,
+                            onExamTap: model.startExam,
                             pronunciationService: model.pronunciationService
                         )
                         .transition(.move(edge: .bottom).combined(with: .opacity))

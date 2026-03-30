@@ -10,7 +10,9 @@
 		081506C989D219D2F38FEAFC /* PopLexAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EC7907E6BD37D00829D09 /* PopLexAppModel.swift */; };
 		08B65B292A088A29DF258D77 /* PopLexRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0775B6647A5DBDD13D6F69 /* PopLexRootView.swift */; };
 		0C35BFF51EA56E305163D4E6 /* NotebookTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F100D2AF860DE3A697A581B /* NotebookTabView.swift */; };
+		0F24C62D9AE9B75FAFF2C191 /* ExamResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066780F6869B0AE091C82401 /* ExamResultsView.swift */; };
 		145D744759C56C5A9079E785 /* LookupTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373986DB74DB86338F77277E /* LookupTabView.swift */; };
+		1D0EE416238B5E86AA0D7806 /* ExamResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066780F6869B0AE091C82401 /* ExamResultsView.swift */; };
 		1E53ECDBA51937E9AB0A2CC4 /* MistakeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88251C9975F02AE8DF87D0B8 /* MistakeTabView.swift */; };
 		20DC049AF6FB23FF1CB1408E /* MacFloatingLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A05194946B2B163B3653C8 /* MacFloatingLookupView.swift */; };
 		29253A9E5ACBCEFD97EAEF20 /* ResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4549048A6A700D8D4585B /* ResultCardView.swift */; };
@@ -37,27 +39,36 @@
 		9E39EC6115206F8E70C56687 /* MiniMaxAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52A8DD7E1C2DEF1E661B44 /* MiniMaxAPIClient.swift */; };
 		9EB5FE6BFCA9203CD3C73A6E /* MacFloatingPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946C645C1D705565A0580E80 /* MacFloatingPanelController.swift */; };
 		ABE4FF65B5AB4A57EC0D1632 /* ImageGenerationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E4EE1E5CA81F09221B9B7 /* ImageGenerationService.swift */; };
+		AC535A5ACABC4F41FE736436 /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09796190090EF205D8E27C99 /* ExamView.swift */; };
 		B2DEA8141628736C25C8FBC9 /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711891A30EE20B5650DE3C4 /* PlatformSupport.swift */; };
 		B3E0F98C74D4731A0F96B676 /* MiniMaxCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5968797E6A3B51B89BDF69 /* MiniMaxCredentialStore.swift */; };
 		B5012F0071984C859DB97727 /* MistakeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C369CC8AA76798615497B /* MistakeModels.swift */; };
 		BC598E6B2F2FF329B634BBDD /* PopLexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F82BE45EC98B414344FBDF /* PopLexApp.swift */; };
+		C0D7300D1C173BA8BEA996ED /* ExamModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980938D4A9084A2EFEB0B07 /* ExamModels.swift */; };
 		C9FB84B7F2040617C5BC7D7E /* StudyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A11B06A65B965EED8CD1B0 /* StudyTabView.swift */; };
 		CB147E408EB2E6190B798194 /* LanguageOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD5850451528F7B4EC61DB /* LanguageOption.swift */; };
 		D1BC5E9ABC747A1C4C4F8155 /* MiniMaxCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5968797E6A3B51B89BDF69 /* MiniMaxCredentialStore.swift */; };
 		D48F9F5DFF51777F21CDBA8B /* StudyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A11B06A65B965EED8CD1B0 /* StudyTabView.swift */; };
+		D6A30E27F10BC50B8DDEBE05 /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09796190090EF205D8E27C99 /* ExamView.swift */; };
 		D6B85DAFAD212484AAA7B550 /* DictionaryLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E2BF8A2169D589275EC399 /* DictionaryLookupService.swift */; };
 		DE6CEAECD9D0FFCD94908352 /* PronunciationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F47BBCDC7AC58F65C97F11 /* PronunciationService.swift */; };
 		E5E0F9DDC79AE4587E4F79F5 /* PopLexTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06CE687FD1800D7F9FC8D41 /* PopLexTheme.swift */; };
+		E8235B7793CB208A97A273DA /* ExamModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980938D4A9084A2EFEB0B07 /* ExamModels.swift */; };
 		EBBBD1374A6ED7D122C8BD6C /* WrongAnswerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8A21DA7A5D511BA16B3572 /* WrongAnswerStore.swift */; };
 		ECDF3CE68B65AE712A10AC1C /* PopLexTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06CE687FD1800D7F9FC8D41 /* PopLexTheme.swift */; };
 		F1DBF7730AA2C7D6B581590F /* ResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4549048A6A700D8D4585B /* ResultCardView.swift */; };
+		F3F864D5FC812E9780DD4B0B /* ExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C50245EAA8C54D8194F9C /* ExamService.swift */; };
 		F47A425D67E55E3990720A4F /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711891A30EE20B5650DE3C4 /* PlatformSupport.swift */; };
 		F712BE03F62659620F58B67B /* AIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE9690EEC18A03EAE9F9F64 /* AIModels.swift */; };
 		F79746FB2FB1DC36FC4F8ECD /* DictionaryLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E2BF8A2169D589275EC399 /* DictionaryLookupService.swift */; };
+		FB2C1D93D54D2D0EB0125A67 /* ExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C50245EAA8C54D8194F9C /* ExamService.swift */; };
 		FBE292B7006925B7317957F2 /* NotebookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8230621A61BF63B3C1E69FAF /* NotebookStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		066780F6869B0AE091C82401 /* ExamResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamResultsView.swift; sourceTree = "<group>"; };
+		09796190090EF205D8E27C99 /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
+		0980938D4A9084A2EFEB0B07 /* ExamModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModels.swift; sourceTree = "<group>"; };
 		1711891A30EE20B5650DE3C4 /* PlatformSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformSupport.swift; sourceTree = "<group>"; };
 		1E52A8DD7E1C2DEF1E661B44 /* MiniMaxAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMaxAPIClient.swift; sourceTree = "<group>"; };
 		2325B81CD53D74AAEB910392 /* WrongAnswerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerListView.swift; sourceTree = "<group>"; };
@@ -66,6 +77,7 @@
 		545E3DB805D09812957092DA /* NotebookEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookEntry.swift; sourceTree = "<group>"; };
 		5B92CE3F7AEB49A96F22E5C6 /* PopLexMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopLexMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F100D2AF860DE3A697A581B /* NotebookTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookTabView.swift; sourceTree = "<group>"; };
+		731C50245EAA8C54D8194F9C /* ExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamService.swift; sourceTree = "<group>"; };
 		73A11B06A65B965EED8CD1B0 /* StudyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTabView.swift; sourceTree = "<group>"; };
 		7D5C369CC8AA76798615497B /* MistakeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistakeModels.swift; sourceTree = "<group>"; };
 		8230621A61BF63B3C1E69FAF /* NotebookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookStore.swift; sourceTree = "<group>"; };
@@ -97,6 +109,15 @@
 			path = Lookup;
 			sourceTree = "<group>";
 		};
+		1C8300926C46107765820774 /* Exam */ = {
+			isa = PBXGroup;
+			children = (
+				066780F6869B0AE091C82401 /* ExamResultsView.swift */,
+				09796190090EF205D8E27C99 /* ExamView.swift */,
+			);
+			path = Exam;
+			sourceTree = "<group>";
+		};
 		1D9A16EE15C6E8578C22BBEC /* Mistake */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				C1E2BF8A2169D589275EC399 /* DictionaryLookupService.swift */,
+				731C50245EAA8C54D8194F9C /* ExamService.swift */,
 				F86E4EE1E5CA81F09221B9B7 /* ImageGenerationService.swift */,
 				1E52A8DD7E1C2DEF1E661B44 /* MiniMaxAPIClient.swift */,
 				9B5968797E6A3B51B89BDF69 /* MiniMaxCredentialStore.swift */,
@@ -134,6 +156,7 @@
 		75A8729698746E134E36C43E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1C8300926C46107765820774 /* Exam */,
 				0CE71B143FC326719AF8708F /* Lookup */,
 				1D9A16EE15C6E8578C22BBEC /* Mistake */,
 				9D975B456C600C5E1C83515B /* Notebook */,
@@ -192,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				FDE9690EEC18A03EAE9F9F64 /* AIModels.swift */,
+				0980938D4A9084A2EFEB0B07 /* ExamModels.swift */,
 				E8DD5850451528F7B4EC61DB /* LanguageOption.swift */,
 				7D5C369CC8AA76798615497B /* MistakeModels.swift */,
 				545E3DB805D09812957092DA /* NotebookEntry.swift */,
@@ -282,6 +306,10 @@
 			files = (
 				7D0241F94309E606A60D7F41 /* AIModels.swift in Sources */,
 				D6B85DAFAD212484AAA7B550 /* DictionaryLookupService.swift in Sources */,
+				C0D7300D1C173BA8BEA996ED /* ExamModels.swift in Sources */,
+				0F24C62D9AE9B75FAFF2C191 /* ExamResultsView.swift in Sources */,
+				FB2C1D93D54D2D0EB0125A67 /* ExamService.swift in Sources */,
+				D6A30E27F10BC50B8DDEBE05 /* ExamView.swift in Sources */,
 				ABE4FF65B5AB4A57EC0D1632 /* ImageGenerationService.swift in Sources */,
 				CB147E408EB2E6190B798194 /* LanguageOption.swift in Sources */,
 				751869CAAC5C588FDA328710 /* LookupTabView.swift in Sources */,
@@ -313,6 +341,10 @@
 			files = (
 				F712BE03F62659620F58B67B /* AIModels.swift in Sources */,
 				F79746FB2FB1DC36FC4F8ECD /* DictionaryLookupService.swift in Sources */,
+				E8235B7793CB208A97A273DA /* ExamModels.swift in Sources */,
+				1D0EE416238B5E86AA0D7806 /* ExamResultsView.swift in Sources */,
+				F3F864D5FC812E9780DD4B0B /* ExamService.swift in Sources */,
+				AC535A5ACABC4F41FE736436 /* ExamView.swift in Sources */,
 				31B7595D0B473D3AC782FBE8 /* ImageGenerationService.swift in Sources */,
 				8FB09BE1F8F58B805751DA2C /* LanguageOption.swift in Sources */,
 				145D744759C56C5A9079E785 /* LookupTabView.swift in Sources */,

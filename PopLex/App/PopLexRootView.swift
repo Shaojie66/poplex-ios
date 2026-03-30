@@ -42,5 +42,11 @@ struct PopLexRootView: View {
                 }
         }
         .tint(PopLexTheme.primaryPink)
+        .fullScreenCover(isPresented: Binding(
+            get: { model.isExamActive },
+            set: { if !$0 { model.isExamActive = false } }
+        )) {
+            ExamView()
+        }
     }
 }

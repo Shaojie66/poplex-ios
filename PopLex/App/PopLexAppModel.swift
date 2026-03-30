@@ -20,7 +20,8 @@ final class PopLexAppModel {
     var wrongAnswers: [WrongAnswer] = []
     var masteredWords: [MasteredWord] = []
     var selectedTab: AppTab = .lookup
-    var isShowingExam = false
+    var currentExamSession: ExamSession?
+    var isExamActive = false
     var isLookingUp = false
     var isGeneratingArtwork = false
     var isGeneratingStory = false
@@ -185,6 +186,10 @@ final class PopLexAppModel {
                 // Silent failure acceptable for Phase 1
             }
         }
+    }
+
+    func startExam() {
+        isExamActive = true
     }
 
     func markCurrentResultMastered() {

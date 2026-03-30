@@ -5,6 +5,7 @@ struct ResultCardView: View {
     let artwork: PlatformImage?
     let isSaved: Bool
     let saveAction: () -> Void
+    let onExamTap: () -> Void
     let pronunciationService: PronunciationService
 
     var body: some View {
@@ -121,17 +122,7 @@ struct ResultCardView: View {
             }
 
             ActionButton(label: "真题", systemImage: "doc.text.fill", tint: PopLexTheme.primaryPink) {
-                // PR2 — exam functionality
-            }
-            .opacity(0.5)
-            .overlay {
-                Text("PR2")
-                    .font(.custom("AvenirNext-DemiBold", size: 10))
-                    .foregroundStyle(PopLexTheme.primaryPink)
-                    .padding(.horizontal, 6)
-                    .padding(.vertical, 3)
-                    .background(PopLexTheme.primaryPink.opacity(0.12), in: Capsule())
-                    .offset(x: 28, y: -20)
+                onExamTap()
             }
         }
     }

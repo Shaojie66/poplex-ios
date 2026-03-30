@@ -227,6 +227,52 @@ actor MiniMaxAPIClient {
         return try decodeJSONPayload(raw, as: NotebookStoryPayload.self)
     }
 
+    func examQuestions(
+        from entries: [NotebookEntry],
+        questionCount: Int,
+        nativeLanguage: LanguageOption,
+        targetLanguage: LanguageOption
+    ) async throws -> ExamGenerationPayload {
+        let wordList = entries.map(\.displayTerm).joined(separator: ", ")
+        let raw = try await chatCompletion(
+            systemPrompt: """
+            You are PopLex, a playful IELTS vocabulary assistant inside a mobile app.
+            Create multiple-choice vocabulary questions for language learners.
+            Sound smart but relaxed. Keep content compact and highly usable.
+            """,
+            userPrompt: """
+            Return exactly one JSON object and nothing else.
+            Required JSON schema:
+            {
+              "questions": [
+                {
+                  "word": "string",
+                  "options": ["string", "string", "string", "string"],
+                  "correctAnswer": "string",
+                  "explanation": "string"
+                }
+              ]
+            }
+
+            Rules:
+            - Generate exactly \(questionCount) questions.
+            - Each question tests one word from this list: \(wordList)
+            - Exactly 4 options per question, one correct answer chosen from the word list.
+            - Options should be plausible but clearly wrong (common confusions or completely unrelated).
+            - explanation: brief reason why the correct answer is right, in \(nativeLanguage.promptLabel).
+            - All explanations must be in \(nativeLanguage.promptLabel).
+            - No markdown. JSON only.
+
+            Target language: \(targetLanguage.promptLabel)
+            Native language: \(nativeLanguage.promptLabel)
+            """,
+            maxTokens: 1200,
+            temperature: 0.6
+        )
+
+        return try decodeJSONPayload(raw, as: ExamGenerationPayload.self)
+    }
+
     func imageData(for prompt: String) async throws -> Data {
         let apiKey = try await apiKeyOrThrow()
         var request = URLRequest(url: URL(string: "https://api.minimax.io/v1/image_generation")!)
