@@ -23,7 +23,9 @@ struct LookupTabView: View {
 
                     if model.isLookingUp {
                         loadingCard
-                    } else if let currentResult = model.currentResult {
+                    }
+
+                    if let currentResult = model.currentResult, !model.isLookingUp {
                         ResultCardView(
                             entry: currentResult,
                             artwork: model.currentArtwork,
